@@ -1,0 +1,33 @@
+
+rootProject.allprojects { project ->
+    if (project.name == 'app') {
+
+        project.afterEvaluate {
+            repositories {
+
+                jcenter()
+
+            }
+
+            dependencies {
+                compile fileTree(dir: 'libs', include: ['*.jar'])
+
+                compile rootProject.ext.dependencies.library.appcompat
+                compile rootProject.ext.dependencies.library.constraint_layout
+
+                compile rootProject.ext.dependencies.library.retrofit2
+                compile rootProject.ext.dependencies.library.retrofit2_gson
+                compile rootProject.ext.dependencies.library.retrofit2_rxjava2
+
+                compile rootProject.ext.dependencies.library.okhttp3
+                compile rootProject.ext.dependencies.library.okhttp3_log
+
+                compile rootProject.ext.dependencies.library.rxandroid
+                compile rootProject.ext.dependencies.library.rxjava
+
+                testCompile rootProject.ext.dependencies.test.library.junit
+            }
+
+        }
+    }
+}

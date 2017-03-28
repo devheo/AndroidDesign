@@ -1,0 +1,8 @@
+rootProject.buildscript.repositories {
+    jcenter()
+}
+
+
+rootProject.buildscript.dependencies {
+    classpath rootProject.ext.dependencies.classpath.android
+}

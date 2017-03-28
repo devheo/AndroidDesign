@@ -1,0 +1,34 @@
+ext{
+    retrofit_ver = '2.2.0'
+    android_support_ver = '25.2.0'
+    okhttp_ver = '3.4.1'
+    rxjava_ver = '2.0.1'
+}
+
+ext.dependencies = [
+        classpath: [
+                android    : "com.android.tools.build:gradle:2.3.+"
+        ],
+
+        library: [
+                appcompat: "com.android.support:appcompat-v7:$ext.android_support_ver",
+                constraint_layout: "com.android.support.constraint:constraint-layout:1.0.2",
+
+                retrofit2: "com.squareup.retrofit2:retrofit:$ext.retrofit_ver",
+                retrofit2_gson: "com.squareup.retrofit2:converter-gson:$ext.retrofit_ver",
+                retrofit2_rxjava2: "com.squareup.retrofit2:adapter-rxjava2:$ext.retrofit_ver",
+
+                rxandroid: "io.reactivex.rxjava2:rxandroid:$ext.rxjava_ver",
+                rxjava: "io.reactivex.rxjava2:rxjava:$ext.rxjava_ver",
+
+                okhttp3: "com.squareup.okhttp3:okhttp:$ext.okhttp_ver",
+                okhttp3_log: "com.squareup.okhttp3:logging-interceptor:$ext.okhttp_ver",
+
+        ],
+
+        test: [
+                library: [
+                        junit: "junit:junit:4.12",
+                ]
+        ]
+]
